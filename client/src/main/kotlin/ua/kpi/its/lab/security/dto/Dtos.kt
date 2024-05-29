@@ -1,5 +1,8 @@
 package ua.kpi.its.lab.security.dto
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class JournalRequest(
     var name: String,
     var topic: String,
@@ -10,6 +13,7 @@ data class JournalRequest(
     var periodic: Boolean,
     var article: ArticleRequest
 )
+@Serializable
 
 data class JournalResponse(
     var id: Long,
@@ -22,6 +26,7 @@ data class JournalResponse(
     var periodic: Boolean,
     var article: ArticleResponse
 )
+@Serializable
 
 data class ArticleRequest(
     var title: String,
@@ -31,6 +36,7 @@ data class ArticleRequest(
     var referenceCount: Int,
     var originalLanguage: Boolean
 )
+@Serializable
 
 data class ArticleResponse(
     var id: Long,
